@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+}
+
+sourceCompatibility = 10
+targetCompatibility = 10
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // for writing tests "testCompile" would suffice, but extensions are
+    // defined in the project's "main" folder, so we need "compile"
+    compile "org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}"
+    testCompile "org.junit.jupiter:junit-jupiter-params:${junitJupiterVersion}"
+    testRuntime "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}"
+
+    testCompile "junit:junit:4.12"
+    testCompile "org.junit.jupiter:junit-jupiter-migrationsupport:${junitJupiterVersion}"
+    testRuntime "org.junit.vintage:junit-vintage-engine:${junitJupiterVersion}"
+
+    testCompile('org.assertj:assertj-core:3.10.0')
+    testCompile('org.mockito:mockito-core:2.19.1')
+    testCompile('org.junit-pioneer:junit-pioneer:0.1.2')
+    testCompile('org.mockito:mockito-junit-jupiter:2.19.1')
+}
+
+test {
+    useJUnitPlatform {
+        excludeTags 'database'
+    }
+//    systemProperties = [
+//            'junit.jupiter.conditions.deactivate': '*'
+//    ]
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
