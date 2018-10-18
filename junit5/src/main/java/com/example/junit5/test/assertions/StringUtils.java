@@ -21,7 +21,7 @@ public final class StringUtils {
         return Double.valueOf(str);
     }
 
-    public static String concat(String... strs) {
+    protected static String concat(String... strs) {
         String retVal = null;
         if (strs != null && strs.length > 0) {
             StringBuilder sb = new StringBuilder();

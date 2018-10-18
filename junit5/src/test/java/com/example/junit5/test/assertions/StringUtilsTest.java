@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Disabled;
 class StringUtilsTest {
 	
 	@Test
-	public void testConcatString() {
+	protected void testConcatString() {
 		String a = "alice";
 		String b = "glauber";
 		
@@ -23,7 +23,7 @@ class StringUtilsTest {
 	
 	@Disabled
     @Test
-    public void testConvertToDoubleWithNullArgument() {
+    void testConvertToDoubleWithNullArgument() {
 
         String age = null;
         Double actual = StringUtils.convertToDouble(age);

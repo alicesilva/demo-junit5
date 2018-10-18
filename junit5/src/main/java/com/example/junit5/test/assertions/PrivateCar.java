@@ -1,4 +1,4 @@
-package com.example.junit5.test.nested;
+package com.example.junit5.test.assertions;
 
 public class PrivateCar {
 
