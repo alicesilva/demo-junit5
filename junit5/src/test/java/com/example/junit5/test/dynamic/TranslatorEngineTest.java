@@ -6,13 +6,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-/**
- * 非动态测试示例, 需要对每个branch创建测试用例, 并进行测试
- * @author bluetata / Sekito.Lv@gmail.com</br>
- * @version java-maven-junit5-example version(1.0)</br>
- * @date 09/06/18 15:44</br>
- * @since JDK 1.8</br>
- */
 class TranslatorEngineTest {
 
     private TranslatorEngine translatorEngine;
@@ -24,18 +17,16 @@ class TranslatorEngineTest {
 
     @Test
     public void testTranlsateHello() {
-        assertEquals("你好", translatorEngine.tranlate("Hello"));
+        assertEquals("Oi", translatorEngine.translate("Hello"));
     }
 
     @Test
     public void testTranlsateYes() {
-        assertEquals("是", translatorEngine.tranlate("Yes"));
+        assertEquals("Sim", translatorEngine.translate("Yes"));
     }
 
     @Test
     public void testTranlsateNo() {
-        assertEquals("否", translatorEngine.tranlate("No"));
+        assertEquals("Não", translatorEngine.translate("No"));
     }
-
-    //... other test case
 }

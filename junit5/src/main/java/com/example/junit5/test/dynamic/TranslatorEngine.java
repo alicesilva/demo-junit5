@@ -4,27 +4,27 @@ import org.junit.platform.commons.util.StringUtils;
 
 public class TranslatorEngine {
 
-    public String tranlate(String text) {
+    public String translate(String text) {
         if (StringUtils.isBlank(text)) {
             throw new IllegalArgumentException("Translated text must not be empty.");
         }
         if ("Hello".equalsIgnoreCase(text)) {
-            return "你好";
+            return "Oi";
 
         } else if ("Yes".equalsIgnoreCase(text)) {
-            return "是";
+            return "Sim";
 
         } else if ("No".equalsIgnoreCase(text)) {
-            return "否";
+            return "Não";
 
         } else if ("Goodbye".equalsIgnoreCase(text)) {
-            return "再见";
+            return "Tchau";
 
         } else if ("Good night".equalsIgnoreCase(text)) {
-            return "晚安";
+            return "Boa noite";
 
         } else if ("Thank you".equalsIgnoreCase(text)) {
-            return "谢谢";
+            return "Obrigado";
         } else {
             return "Not found";
         }

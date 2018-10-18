@@ -8,7 +8,10 @@ public final class StringUtils {
     }
 
     public static String getDefaultIfNull(final String str, final String defaultStr) {
-        return str == null ? defaultStr : str;
+    	if (str == null ) {
+    		return defaultStr;
+    	}
+    	return str;
     }
 
     public static Double convertToDouble(String str){
@@ -31,6 +34,5 @@ public final class StringUtils {
         }
         return retVal;
     }
-
 }
 
