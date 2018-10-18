@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: com.example.junit5.test.assertions.StringUtilsTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.256 s <<< FAILURE! - in com.example.junit5.test.assertions.StringUtilsTest
+testConvertToDoubleWithNullArgument  Time elapsed: 0.194 s  <<< ERROR!
+java.lang.IllegalArgumentException: String null!
+	at com.example.junit5.test.assertions.StringUtilsTest.testConvertToDoubleWithNullArgument(StringUtilsTest.java:26)
+
+testConvertToDoubleThrowException  Time elapsed: 0.016 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown ==> expected: <java.lang.NumberFormatException> but was: <java.lang.IllegalArgumentException>
+	at com.example.junit5.test.assertions.StringUtilsTest.testConvertToDoubleThrowException(StringUtilsTest.java:41)
+Caused by: java.lang.IllegalArgumentException: String null!
+	at com.example.junit5.test.assertions.StringUtilsTest.lambda$testConvertToDoubleThrowException$5(StringUtilsTest.java:42)
+	at com.example.junit5.test.assertions.StringUtilsTest.testConvertToDoubleThrowException(StringUtilsTest.java:41)
+
